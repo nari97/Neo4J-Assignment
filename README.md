@@ -25,6 +25,7 @@ UI
 ============================
 
 Run UI/app.py. Runs on 127.0.0.1:5001
+
     USE - python UI/app.py
 
 To access the homepage, type in 127.0.0.1:5001/ in the web browser.
