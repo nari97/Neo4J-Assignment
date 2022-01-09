@@ -8,9 +8,11 @@ File requirements.txt contains all the packages that are required
 API
 ===========================
 
-Run API/app.py to start the API. Runs on 127.0.0.1:5000.
+Run API/app.py to start the API. Runs on 127.0.0.1:5000. 
 
     python API/app.py
+    
+The API assumes that the address that the neo4j library runs on is "bolt://127.0.0.1:7687" and username is "neo4j" and password is "neo". This should be changed on line number  8 in API/app.py if different credentials are being used.
 
 1. Create Employee Node
 
