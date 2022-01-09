@@ -32,20 +32,3 @@ class Client:
     def close(self):
         self.driver.close()
 
-
-def main():
-    url = "neo4j+s://ed133865.databases.neo4j.io"
-    username = "neo4j"
-    password = "MwR45ZKdENLdPWRlelEPJkmCXSzXDOshR9VINq5f3fE"
-
-    neo = Client(url, username, password)
-
-    neo.createEmployee("Employee1", 1)
-    neo.createEmployee("Employee2", 2)
-
-    neo.returnEmployees()
-
-    neo.close()
-
-if __name__ == "__main__":
-    main()
