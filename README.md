@@ -2,6 +2,8 @@ Neo4J Assignment
 ==========================
 
 File requirements.txt contains all the packages that are required
+    
+    USE - pip install -r requirements.txt
 
 API
 ===========================
