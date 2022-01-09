@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    </head>
+    <body>
+        <center>
+            <h2>Employee Data</h2>
+            <div class = "row justify-content-center">
+                <div class="w-50">
+                    <table class = "table">
+                    <thead class="thead-dark">
+                    <tr>
+                        <th scope = "col">Employee ID</th>
+                        <th scope = "col">Employee Name</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for row in data %}
+                    <tr>
+                        
+                            <td>{{row['emp_id']}}</td>
+                            <td>{{row['name']}}</td>
+                        
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                    </table>
+            </div>
+        </div>
+        </center>
+    </body>
+</html>
