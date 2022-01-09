@@ -8,6 +8,20 @@ class Client:
         self.driver = GraphDatabase.driver(url, auth = (user, password))
 
     def createEmployee(self, name, id):
+        '''
+            Creates employee
+
+            Input
+            ==========
+            
+            name (str): Name of employee
+            id (int): ID of employee
+
+            Returns
+            ==========
+
+            JSON containing name and id
+        '''
 
         session = self.driver.session()
         session.run("CREATE (e:Employee {name:$name, emp_id:$emp_id})", name = name, emp_id = id)
@@ -16,6 +30,14 @@ class Client:
         return json.dumps({'name' : name, 'emp_id' : id})
 
     def returnEmployees(self):
+        '''
+            Returns all employees
+
+            Returns
+            ==========
+
+            List containing employee details
+        '''
 
         session = self.driver.session()
         result = session.run("MATCH (e:Employee) RETURN e.name AS name, e.emp_id AS id")
@@ -30,5 +52,8 @@ class Client:
 
 
     def close(self):
+        '''
+            Close connection with database
+        '''
         self.driver.close()
 
