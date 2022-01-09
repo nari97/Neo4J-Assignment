@@ -5,6 +5,7 @@ from Client import Client
 app = Flask(__name__)
 api = Api(app)
 
+#Change if using different address/credentials
 neo = Client("bolt://127.0.0.1:7687", "neo4j", "neo")
 
 class Create(Resource):
