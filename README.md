@@ -27,7 +27,7 @@ Run API/app.py to start the API. Runs on 127.0.0.1:5000.
 UI
 ============================
 
-Run UI/app.py. Runs on 127.0.0.1:5001
+Run UI/app.py. Runs on 127.0.0.1:5001. Make sure to also run API/app.py before running UI/app.py
 
     python UI/app.py
 
