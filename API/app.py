@@ -9,6 +9,9 @@ api = Api(app)
 neo = Client("bolt://127.0.0.1:7687", "neo4j", "neo")
 
 class Create(Resource):
+    '''
+        Creates employee node
+    '''
     def post(self):
         data = request.form
         #print (data)
@@ -16,11 +19,15 @@ class Create(Resource):
         return data
 
 class Display(Resource):
+    '''
+        Returns all the employees and their parameters
+    '''
     def get(self):
         data = neo.returnEmployees()
 
         return jsonify(data)
 
+# Add API
 api.add_resource(Create, "/create")
 api.add_resource(Display, "/display")
 
